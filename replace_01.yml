@@ -1,0 +1,8 @@
+- hosts: serwery1
+  remote_user: root
+  vars:
+   ansible_ssh_private_key_file: "/home/proseti/.ssh/id_rsa"
+  tasks:
+  - service:
+     name: apache2
+     state: started
