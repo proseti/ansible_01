@@ -1,0 +1,11 @@
+- hosts: serwery1
+  remote_user: root
+  vars:
+   ansible_ssh_private_key_file: "/home/proseti/.ssh/id_rsa"
+  tasks:
+  - name: Move foo to bar
+    copy: 
+      force: yes
+      src: /exercise1/nowy
+      dest: /exercise1/nowy
+      backup: yes
